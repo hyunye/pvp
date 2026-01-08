@@ -5,7 +5,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: 'page/index.html'
+                main: 'asset/index.html'
             },
             output: {
                 chunkFileNames: 'src/[name]_[hash].js',
@@ -14,6 +14,6 @@ export default defineConfig({
             }
         },
         outDir: 'dist',
-        assetsDir: ''
+        assetsDir: 'asset'
     }
 })

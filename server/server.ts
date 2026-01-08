@@ -1,13 +1,13 @@
 import express from 'express'
 import path from 'path'
-import { pageDir, srcDir } from './dir.js'
+import { assetDir, srcDir } from './dir.js'
 import config from './config.json' with {type: 'json'}
 
 const app = express()
 app.use('/src', express.static(srcDir))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(pageDir, 'index.html'))
+    res.sendFile(path.join(assetDir, 'index.html'))
 })
 
 app.listen(config.port, () => {
